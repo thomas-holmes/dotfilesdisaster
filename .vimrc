@@ -59,7 +59,6 @@ set showcmd
 set showmatch
 set noshowmode
 set smartcase
-"set statusline=%F%m%r%h%w\ [%n]%=%y\ [%4l,%3v\ %p%%] " Disable with Powerline
 set tabstop=2 softtabstop=2 shiftwidth=2
 set t_Co=256
 set wildmenu
@@ -92,9 +91,6 @@ if has("autocmd")
 	augroup END
 
 endif
-
-" GetLatestVimScripts options
-let g:GetLatestVimScripts_allowautoinstall=1
 
 " Keybind to edit vimrc
 nmap <Leader>v :tabedit $MYVIMRC<CR>
@@ -136,26 +132,19 @@ map <F9> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<
 
 let loaded_matchparen = 1
 
-" Notes.vim options
-let g:notes_directory = '~/Documents/Notes'
-let g:notes_suffix = '.txt'
-let g:notes_title_sync = 'rename_file'
-
 " Enable rspec syntax highlighting everywhere
 autocmd BufRead *_spec.rb syn keyword rubyRspec describe context it specify it_should_behave_like before after setup subject its shared_examples_for shared_context let expect
 highlight def link rubyRspec Function
 
 " enable rails omni-complete
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
-"" this can potentially execute code and cause issues
+" this can potentially execute code and cause issues
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 "
 let ruby_operators = 1
 let ruby_no_expensive = 1
-" Powerline options
-" python from powerline.ext.vim import source_plugin; source_plugin()
-
 let g:solarized_termtrans = 1
+
 color solarized
 
 if has("gui_running")
