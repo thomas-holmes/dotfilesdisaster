@@ -32,6 +32,8 @@ Bundle "vim-scripts/Zenburn"
 " Bundle 'netrw.vim'
 Bundle 'taglist.vim'
 Bundle 'vcscommand.vim'
+" Bundle 'vim-scripts/RelOps' " Too slow
+set relativenumber
 set autochdir
 set autowrite
 set background=dark
