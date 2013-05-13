@@ -87,3 +87,5 @@ if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
     zle -N zle-line-init
     zle -N zle-line-finish
 fi
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
