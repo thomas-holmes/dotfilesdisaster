@@ -7,7 +7,6 @@ xset fp rehash
 
 xset -b
 
-conky &
 urxvtd -q -o -f &
 pidgin &
 /home/thomas/.dropbox-dist/dropboxd &
