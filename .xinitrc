@@ -10,6 +10,7 @@ xset -b
 urxvtd -q -o -f &
 pidgin &
 /home/thomas/.dropbox-dist/dropboxd &
+conky&
 xcompmgr &
 
 if [ -n "$DISPLAY" ]; then
