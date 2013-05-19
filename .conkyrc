@@ -42,10 +42,8 @@ ${if_mpd_playing} ${mpd_status} - ${mpd_elapsed}/${mpd_length} ${scroll 50 5 ${m
 ${color1}Activity on /dev/sda${color} ${diskiograph 10,50 000000 ff0000 -t}${endif} \
 ${color1}/ ${color2}${fs_free /} ${fs_bar 5,50 /} \
 ${color1}/home ${color2}${fs_free /home} ${fs_bar 5,50 /home} \
-${alignc -150}${color1}wlp1s0 ${color2}${addr wlp1s0} \
-${color1}Up${color} ${upspeed wlp1s0} ${color1} Down${color} ${downspeed wlp1s0}  \
+${alignc -150}${color1}enp8s0 ${color2}${addr enp8s0} \
+${color1}Up${color} ${upspeed enp8s0} ${color1} Down${color} ${downspeed enp8s0}  \
 ${color1}RAM${color} ${memperc}% ${membar 5,50}  \
 ${color1}${freq_g}GHz  ${color}${cpubar cpu1 5,50}${color1} ${color}${cpubar cpu2 5,50} ${color}${cpubar cpu3 5,50} ${color}${cpubar cpu4 5,50} ${color}${cpubar cpu5 5,50} ${color}${cpubar cpu6 5,50} ${color}${cpubar cpu7 5,50} ${color}${cpubar cpu8 5,50} \
 ${alignr 5}${color2}${platform coretemp.0 temp 1}°  \
-${color1}Battery ${color}${battery_percent BAT0}% ${battery_bar 5,50 BAT0} \
-${color2}${battery_time BAT0}
