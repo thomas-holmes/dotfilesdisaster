@@ -25,6 +25,7 @@ Bundle "Lokaltog/powerline"
 Bundle "altercation/vim-colors-solarized"
 Bundle "jcf/vim-latex"
 Bundle "vim-scripts/Zenburn"
+Bundle "bitfyre/vim-indent-html"
 "Bundle 'skammer/vim-css-color'
 "Bundle 'hexHighlight.vim'
 " Bundle 'hgrev'
@@ -140,11 +141,11 @@ highlight def link rubyRspec Function
 
 " enable rails omni-complete
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
-" this can potentially execute code and cause issues
+autocmd FileType ruby,eruby let g:rubycomplete_class_in_global = 1
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 "
 let ruby_operators = 1
-let ruby_no_expensive = 1
+" let ruby_no_expensive = 1
 let g:solarized_termtrans = 1
 
 color solarized
