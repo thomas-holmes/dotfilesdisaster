@@ -11,5 +11,3 @@ alias pacman='sudo pacman'
 eval $(keychain --eval --agents ssh -Q --quiet $HOME/.ssh/id_rsa)
 
 setxkbmap -option ctrl:nocaps # Get out of here, caps-lock
-
-/usr/bin/fix_governor.sh
