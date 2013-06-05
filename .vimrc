@@ -26,6 +26,7 @@ Bundle "altercation/vim-colors-solarized"
 Bundle "jcf/vim-latex"
 Bundle "vim-scripts/Zenburn"
 Bundle "bitfyre/vim-indent-html"
+Bundle "FredKSchott/CoVim"
 "Bundle 'skammer/vim-css-color'
 "Bundle 'hexHighlight.vim'
 " Bundle 'hgrev'
