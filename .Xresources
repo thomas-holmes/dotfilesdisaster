@@ -36,7 +36,8 @@ URxvt.intensityStyles: false
 
 ! Dark
 #define S_base03        #002b36
-#define S_base03_fix    #6a6a6a
+! #define S_base03_fix    #6a6a6a
+#define S_base03_fix    Grey25
 #define S_base02        #073642
 #define S_base01        #586e75
 #define S_base00        #657b83
