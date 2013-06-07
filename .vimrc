@@ -8,32 +8,38 @@ set rtp+=~/.vim/bundle/vundle/
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 call vundle#rc()
 
-" GitHub repos
+"Vundle updates itself. How cool!
 Bundle 'gmarik/vundle'
-" Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/syntastic'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-unimpaired'
+
+"Languages/Syntax
+Bundle 'elixir-lang/vim-elixir'
+Bundle "jcf/vim-latex"
+Bundle 'jimenezrick/vimerl'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'nono/vim-handlebars'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-rake'
-"Bundle 'xolox/vim-notes'
-Bundle 'nono/vim-handlebars'
-Bundle 'kchmck/vim-coffee-script'
+Bundle 'vim-ruby/vim-ruby'
+
+"Navigation
 Bundle "kien/ctrlp.vim"
+
+"Tools
+Bundle "FredKSchott/CoVim"
+Bundle 'scrooloose/syntastic'
+Bundle 'taglist.vim'
+Bundle 'tpope/vim-unimpaired'
+Bundle 'tpope/vim-fugitive'
+Bundle 'vcscommand.vim'
+
+"Appearance
 Bundle "Lokaltog/powerline"
 Bundle "altercation/vim-colors-solarized"
-Bundle "jcf/vim-latex"
-Bundle "vim-scripts/Zenburn"
 Bundle "bitfyre/vim-indent-html"
-"Bundle 'skammer/vim-css-color'
-"Bundle 'hexHighlight.vim'
-" Bundle 'hgrev'
-" Bundle 'matchit.zip'
-" Bundle 'netrw.vim'
-Bundle 'taglist.vim'
-Bundle 'vcscommand.vim'
-" Bundle 'vim-scripts/RelOps' " Too slow
+Bundle "Lokaltog/powerline"
+Bundle "vim-scripts/Zenburn"
+
+
 set relativenumber
 set autochdir
 set autowrite
