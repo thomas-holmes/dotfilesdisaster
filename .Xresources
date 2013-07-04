@@ -9,8 +9,8 @@ URxvt*scrollBar: false
 URxvt*loginShell: true
 Urxvt*secondaryScroll:  true    # Enable Shift-PageUp/Down in screen
 URxvt*saveLines: 5000
-! URxvt*termName: rxvt-unicode
-URxvt*termName: xterm-256color
+URxvt*termName: rxvt-256color
+! URxvt*termName: xterm-256color
 URxvt.perl-ext-common: default,clipboard,common,url-select,keyoard-select
 URxvt*perl-ext: default,matcher
 URxvt.url-select.launcher: /usr/bin/chromium
