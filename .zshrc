@@ -97,3 +97,4 @@ zle -N zle-line-init
 zle -N zle-line-finish  
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$PATH:$HOME/.bin
