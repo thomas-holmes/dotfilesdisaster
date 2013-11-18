@@ -98,4 +98,7 @@ if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
     zle -N zle-line-finish
 fi
 
+# disable special meaning of certain characters
+unsetopt nomatch
+
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
