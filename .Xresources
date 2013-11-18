@@ -62,7 +62,9 @@ URxvt.intensityStyles: false
 ! To only apply colors to your terminal, for example, prefix
 ! the color assignment statement with its name. Example:
 !
-*background:              S_base03
+!*background:              S_base03
+!URxvt*background:         [70]#002b36
+URxvt*background:         #002b36
 *foreground:              S_base0
 *fading:                  40
 *fadeColor:               S_base03
