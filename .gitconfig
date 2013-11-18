@@ -3,6 +3,7 @@
 	email = thomas@devminded.com
 [core]
 	editor = vim
+	excludesfile = ~/.gitignore
 [color]
 	ui = true
 [push]
