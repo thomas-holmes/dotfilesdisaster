@@ -1,7 +1,8 @@
 syntax on
 syntax enable
+set shell=bash
 cd $HOME
-
+" ✘
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/vundle/
@@ -20,6 +21,9 @@ Bundle 'nono/vim-handlebars'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-rake'
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'jnwhiteh/vim-golang'
+Bundle 'carlhuda/janus'
+Bundle 'dag/vim-fish'
 
 "Navigation
 Bundle "kien/ctrlp.vim"
@@ -31,6 +35,7 @@ Bundle 'taglist.vim'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-fugitive'
 Bundle 'vcscommand.vim'
+Bundle 'skalnik/vim-vroom'
 
 "Appearance
 Bundle "Lokaltog/powerline"
@@ -61,7 +66,12 @@ set ignorecase
 set incsearch
 set laststatus=2
 set linebreak
-set listchars=tab:▸\ ,eol:¬
+set list
+
+set listchars=""
+"set listchars=tab:▸▸
+set listchars=tab:\ \ 
+set listchars+=trail:✘
 set hlsearch
 set number
 set showcmd
@@ -110,6 +120,14 @@ map <Leader>P :set paste<CR>"+]P:set nopaste<CR>
 map <Leader>y "+y
 map <Leader>Y "+Y
 
+"Config vroom
+let g:vroom_write_all = 1
+let g:vroom_map_keys = 0
+let g:vroom_use_bundle_exec = 1
+
+nmap <leader>t :call vroom#RunNearestTest()<CR>
+nmap <leader>T :call vroom#RunTestFile()<CR>
+
 " Open a Quickfix window for the last search.
 nnoremap <silent> <Leader>q :execute 'vimgrep /'.@/.'/g %'<CR>:copen<CR>
 
@@ -122,14 +140,8 @@ map <silent> <F2> :if &guioptions =~# 'T' <Bar>
 	\set guioptions+=m <Bar>
 \endif<CR>
 
-" Keybind to toggle the NERDTree file browser and NERDTree options
-map <F3> :NERDTreeToggle<CR>
-let NERDTreeShowBookmarks=1
-let NERDChristmasTree=1
-let NERDTreeHijackNetrw=1
-
-" Keybind to toggle Taglist tag browser
-map <F4> :TlistToggle<CR>
+" tab stuff
+autocmd FileType go setlocal noexpandtab
 
 " Keybind to toggle spell checking
 map <F7> :set spell!<CR>
