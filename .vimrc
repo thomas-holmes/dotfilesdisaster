@@ -6,47 +6,65 @@ cd $HOME
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/vundle/
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+" set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 call vundle#rc()
-
 "Vundle updates itself. How cool!
 Bundle 'gmarik/vundle'
 
+"Powerline Replacement
+Bundle 'bling/vim-airline'
+
+
 "Languages/Syntax
 Bundle 'elixir-lang/vim-elixir'
-Bundle "jcf/vim-latex"
 Bundle 'jimenezrick/vimerl'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'nono/vim-handlebars'
-Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-rake'
-Bundle 'vim-ruby/vim-ruby'
 Bundle 'jnwhiteh/vim-golang'
-Bundle 'carlhuda/janus'
-Bundle 'dag/vim-fish'
+Bundle 'Blackrush/vim-gocode'
+Bundle 'travitch/hasksyn'
+" Bundle 'PProvost/vim-ps1'
+" Bundle 'Valloric/YouCompleteMe'
+" Bundle 'carlhuda/janus'
+" Bundle 'dag/vim-fish'
+
+" Ruby
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'tpope/vim-rails.git'
+Bundle 'tpope/vim-cucumber'
+Bundle 'tpope/vim-endwise'
+"Bundle 'nelstrom/vim-textobj-rubyblock'
 
 "Navigation
 Bundle "kien/ctrlp.vim"
 
 "Tools
-Bundle "FredKSchott/CoVim"
 Bundle 'scrooloose/syntastic'
 Bundle 'taglist.vim'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-fugitive'
-Bundle 'vcscommand.vim'
 Bundle 'skalnik/vim-vroom'
+Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-bundler'
+"Bundle 'tpope/vim-dispatch'
+Bundle 'airblade/vim-rooter'
+Bundle 'mattn/gist-vim'
+Bundle 'mattn/webapi-vim'
+" Bundle 'FredKSchott/CoVim'
+" Bundle 'vcscommand.vim'
+" Bundle 'vim-scripts/AutoTag'
 
 "Appearance
-Bundle "Lokaltog/powerline"
-Bundle "altercation/vim-colors-solarized"
+" Bundle 'Lokaltog/powerline'
+Bundle 'altercation/vim-colors-solarized'
 Bundle "bitfyre/vim-indent-html"
-Bundle "Lokaltog/powerline"
-Bundle "vim-scripts/Zenburn"
+" Bundle 'Lokaltog/powerline'
+" Bundle 'vim-scripts/Zenburn'
 
 
 set relativenumber
-set autochdir
+" set autochdir
 set autowrite
 set background=dark
 set backspace=indent,eol,start
@@ -67,6 +85,7 @@ set incsearch
 set laststatus=2
 set linebreak
 set list
+set winwidth=79
 
 set listchars=""
 "set listchars=tab:▸▸
@@ -111,6 +130,10 @@ if has("autocmd")
 
 endif
 
+" vim-airline
+let g:airline_powerline_fonts = 1
+let g:airline_theme = "solarized"
+
 " Keybind to edit vimrc
 nmap <Leader>v :tabedit $MYVIMRC<CR>
 
@@ -124,6 +147,7 @@ map <Leader>Y "+Y
 let g:vroom_write_all = 1
 let g:vroom_map_keys = 0
 let g:vroom_use_bundle_exec = 1
+let g:vroom_use_dispatch = 1
 
 nmap <leader>t :call vroom#RunNearestTest()<CR>
 nmap <leader>T :call vroom#RunTestFile()<CR>
@@ -161,10 +185,11 @@ highlight def link rubyRspec Function
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd FileType ruby,eruby let g:rubycomplete_class_in_global = 1
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
-"
+
 let ruby_operators = 1
-" let ruby_no_expensive = 1
 let g:solarized_termtrans = 1
+
+let g:gist_post_private = 1
 
 color solarized
 
